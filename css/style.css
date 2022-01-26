@@ -266,7 +266,7 @@ iframe{
     border:0;
 }
 i{font-style:italic}
-{/*! float:left; *//*! height:auto */}
+
 :-webkit-input-placeholder{opacity:1}
 :-moz-placeholder{opacity:1}
 :-ms-input-placeholder{opacity:1}
@@ -401,7 +401,6 @@ button{
 }
 .slick-list {position: relative; display: block; overflow: hidden; margin: 0; padding: 0; }
 .slick-list:focus {outline: none; }
-.slick-list.dragging {cursor: pointer; cursor: hand; }
 .slick-slider .slick-track,
 .slick-slider .slick-list {
     -webkit-transform: translate3d(0, 0, 0);
@@ -6146,7 +6145,6 @@ aside .widget.border:first-child {
 }
 
 .is_clickable {
-  cursor: hand;
   cursor: pointer;
 }
 .nstSlider {
