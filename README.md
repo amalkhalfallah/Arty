@@ -1,5 +1,6 @@
 # Arty
-## Webint project done by:  Amal Khalfallah
+## Webint project done by:  
+                            Amal Khalfallah
                             Abhishek Burse
                             Noura Mnif
 
