@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from creativelayers.net/themes/jobhunt-html/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Jan 2022 19:59:21 GMT -->
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Job Hunt</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="CreativeLayers">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
+	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+	<link rel="stylesheet" type="text/css" href="css/chosen.css" />
+	<link rel="stylesheet" type="text/css" href="css/colors/colors.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+
+	<div class="page-loading">
+		<img src="images/loader.gif" alt="" />
+		<span>Skip Loader</span>
+	</div>
+
+	<div class="theme-layout" id="scrollup">
+
+		<div class="responsive-header">
+
+		</div>
+
+		<header class="gradient">
+
+		</header>
+
+
+		<section>
+			<div class="block remove-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="account-popup-area signup-popup-box static">
+								<div class="account-popup">
+									<h3>Sign Up</h3>
+									<h4 class="text-uppercase text-center mb-5 exists" style="color: red;">this users
+										already exists</h4>
+
+									<select class="cfield" name="Role" id="Role">
+										<option class="cfield" value="Recruiter">Recruiter</option>
+										<option class="cfield" value="JobSeeker">JobSeeker</option>
+
+									</select>
+									<form>
+										<div class="cfield">
+											<input type="text" id="nom" placeholder="Username" />
+											<i class="la la-user"></i>
+										</div>
+										<p id="nom-err" style="color: red;">Please provide your name only alphabet
+											caracters are accepted </p>
+
+
+										<div class="cfield">
+											<input type="password" id="password" placeholder="********" />
+											<i class="la la-key"></i>
+										</div>
+										<p id="password-err" style="color: red;"> Please provide your password </p>
+
+										<div class="cfield">
+											<input type="password" id="repeatpassword" placeholder="********" />
+											<i class="la la-key"></i>
+										</div>
+										<p id="repeatpassword-err" style="color: red;"> Repeat your password</p>
+
+										<div class="cfield">
+											<input type="email" id="email" placeholder="Email" />
+											<i class="la la-envelope-o"></i>
+										</div>
+										<p id="email-err" style="color: red;"> Please provide a valid email xxxx@xxxx.xx
+										</p>
+
+
+										<button type="button" id="register-btn">Signup</button>
+									</form>
+
+								</div>
+							</div><!-- SIGNUP POPUP -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+	</div>
+
+
+
+	<div class="account-popup-area signup-popup-box">
+		<div class="account-popup">
+			<span class="close-popup"><i class="la la-close"></i></span>
+			<h3>Sign Up</h3>
+			<div class="select-user">
+				<span>Candidate</span>
+				<span>Employer</span>
+			</div>
+
+			<div class="extra-login">
+				<span>Or</span>
+				<div class="login-social">
+					<a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
+					<a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
+				</div>
+			</div>
+		</div>
+		<p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#" id="login"
+				class="fw-bold text-body register"><u>Login here</u></a>
+	</div><!-- SIGNUP POPUP -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/modernizr.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/select-chosen.js"></script>
+	<script src="js/jquery.scrollbar.min.js"></script>
+	<script
+		src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYc537bQom7ajFpWE5sQaVyz1SQa9_tuY&amp;sensor=true&amp;libraries=places"></script>
+	<script src="js/maps2.js"></script>
+	<script>
+
+
+		$("#email-err").hide()
+		$("#password-err").hide()
+		$("#nom-err").hide()
+		$("#repeatpassword-err").hide()
+		$(".exists").hide()
+
+		$('#register-btn').click(function () {
+
+			var is_ok = true
+			var exists = false;
+			var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			var regexnom = /^[A-Za-z]+$/;
+			if (!regex.test($("#email").val())) {
+				is_ok = false
+				$("#email-err").show()
+			} else {
+				$("#email-err").hide()
+			}
+			if ($("#password").val() == "") {
+
+				$("#password-err").show()
+				is_ok = false
+			} else {
+				$("#password-err").hide()
+			}
+			if (!regexnom.test($("#nom").val()) || $("#nom").val() == "") {
+				console.log($("nom").val())
+				$("#nom-err").show()
+				is_ok = false
+			} else {
+				$("#nom-err").hide()
+			}
+			if ($("#repeatpassword").val() == "" || $("#repeatpassword").val() != $("#password").val()) {
+				$("#repeatpassword-err").show()
+				is_ok = false
+			} else {
+				$("#repeatpassword-err").hide()
+			}
+			if (is_ok) {
+
+				$("#email-err").hide()
+				$("#password-err").hide()
+				$("#nom-err").hide()
+				$("#repeatpassword-err").hide()
+
+				users = []
+				obj = {}
+				obj.name = $("#nom").val()
+				obj.email = $("#email").val()
+				obj.password = $("#password").val()
+
+				obj.skills = []
+				obj.posts = []
+				obj.status = []
+				obj.Role = ($("#Role").val())
+				window.location.href = "index.html";
+
+				if (localStorage.getItem('users')) {
+					users = JSON.parse(localStorage.getItem('users'))
+					for (u in users) {
+						console.log(users[u]);
+						if ($("#email").val() == users[u].email) {
+							exists = true;
+						}
+					}
+					if (!exists) {
+						users.push(obj)
+					}
+
+				} else {
+					users.push(obj)
+				}
+
+				localStorage.setItem('users', JSON.stringify(users));
+				if (exists) {
+					$(".exists").show()
+				}
+
+
+
+
+			}
+		})
+
+	</script>
+
+</body>
+
+
+</html>

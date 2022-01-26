@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Profile </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/chosen.css" />
+    <link rel="stylesheet" type="text/css" href="css/colors/colors.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container bootstrap snippets bootdey">
+        <div class="row">
+            <div class="profile-nav col-md-3">
+                <div class="panel">
+                    <div class="user-heading round">
+                        <a href="#">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="image profile">
+                        </a>
+                        <h1 id="profile-name">a</h1>
+                        <p id="profile-email">a</p>
+                    </div>
+
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="index.html" title=""><i class="la la-unlink"></i>Logout</a></li>
+                        <li><a href="#" id="profile"> <i class="fa fa-user"></i> Profile </a></li>
+                        <li><a href="#" id="jobs"> <i class="fa fa-calendar"></i> Jobs </a></li>
+                        <li><a href="#" id="edit"> <i class="fa fa-edit"></i> Edit profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile-info col-md-9">
+
+                <div id="jobs2">
+
+
+                    <div class="table">
+                        <table id="tableHtml">
+
+
+
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="panel" id="bio">
+                <div class="panel">
+                    <form>
+                        <textarea placeholder="Whats in your mind today?" rows="2"
+                            class="form-control input-lg p-text-area" id="textstatus"></textarea>
+                    </form>
+                    <footer class="panel-footer">
+                        <button class="btn btn-warning pull-right" id="addstatus">Post</button>
+                        <ul class="nav nav-pills">
+                            <li>
+                                <a href="#"><i class="fa fa-map-marker"></i></a>
+                            </li>
+                            <li>
+                                <i class="fa fa-camera">
+                                    <input type='file' id="imgInp" /></i>
+                            </li>
+                            <li>
+                                <a href="#"><i class=" fa fa-film"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-microphone"></i></a>
+                            </li>
+                        </ul>
+                    </footer>
+                    <img id="blah" src="#" alt="" />
+
+                </div>
+                <div class="panel-body bio-graph-info">
+                    <h1>Bio Graph</h1>
+                    <div class="row">
+                        <div class="bio-row">
+                            <p><span>First Name </span>: &nbsp; <span id="name-text"> </span></p> <input type="text"
+                                id="name" />
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Last Name </span>: &nbsp; <span id="lastname-text"> </span></p> <input type="text"
+                                id="lastname" />
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Country </span>: &nbsp; <span id="country-text"> </span></p> <input type="text"
+                                id="country" />
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Birthday</span>: &nbsp; <span id="birthday-text"> </span></p> <input type="date"
+                                id="birthday" />
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Occupation </span>: &nbsp; <span id="occupation-text"> </span></p> <input
+                                type="text" id="occupation" />
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Email </span>: &nbsp; <span id="email-text"> </span></p> <input type="text"
+                                id="email" />
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Mobile </span>: &nbsp; <span id="mobile-text"> </span></p> <input type="text"
+                                id="mobile" />
+                        </div>
+
+                    </div>
+
+                    <button class="btn btn-warning pull-right" id="update"> Update Bio Graph </button>
+                </div>
+
+                <div class="panel-body bio-graph-info">
+                    <h1>Skills</h1>
+                    <input type="text" class="form-control" aria-label="Add a skill "
+                        aria-describedby="inputGroup-sizing-sm" id="skill-text"> <br>
+                    <button class="btn btn-warning pull-right" id="Addskill"> Add a skill </button>
+                    <br>
+                    <br>
+                    <ul id="skills">
+
+
+                    </ul>
+                </div>
+
+
+                <div id="dropZone">
+                    <p>Drag your image or video here or click in this area.</p>
+                </div>
+
+                <div class="panel-body bio-graph-info">
+                    <h1>What's in your mind</h1>
+
+                    <div id="status">
+
+                    </div>
+
+                    <h1>Showroom</h1>
+                    <div class="row" id="posts">
+
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        //document.getElementById("jobs2").style.visibility = "hidden";
+        var x = document.getElementById('jobs2');
+        var x1 = document.getElementById('bio');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+        localStorage.removeItem("DATA");
+
+        var dropZone = document.getElementById('dropZone');
+
+        // Optional.   Show the copy icon when dragging over.  Seems to only work for chrome.
+        dropZone.addEventListener('dragover', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'copy';
+        });
+
+        // Get file data on drop
+        dropZone.addEventListener('drop', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            var files = e.dataTransfer.files; // Array of all files
+
+            for (var i = 0, file; file = files[i]; i++) {
+                if (true) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e2) {
+                        // finished reading file data.
+                        if (e2.target.result.includes("/mp4")) {
+
+                            var video = document.createElement('video');
+                            video.src = e2.target.result;
+                            video.autoplay = true;
+
+                            document.body.appendChild(video);
+                        }
+                        else {
+                            var img = document.createElement('img');
+                            img.src = e2.target.result;
+                            document.body.appendChild(img);
+                        }
+                        if (localStorage.getItem('users')) {
+                            users = JSON.parse(localStorage.getItem('users'))
+                            for (u in users) {
+                                console.log(users[u]);
+                                if (sessionStorage.getItem('email') == users[u].email) {
+                                    users[u].posts.push(e2.target.result)
+                                    localStorage.setItem('users', JSON.stringify(users));
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+                    reader.readAsDataURL(file); // start reading the file data.
+                }
+            }
+            location.reload();
+        });
+    </script>
+    <script>
+        $('#addstatus').click(function () {
+            if (localStorage.getItem('users')) {
+                users = JSON.parse(localStorage.getItem('users'))
+                for (u in users) {
+                    console.log(users[u]);
+                    if (sessionStorage.getItem('email') == users[u].email) {
+                        users[u].status.push($("#textstatus").val())
+                        localStorage.setItem('users', JSON.stringify(users));
+                    }
+                }
+
+
+            }
+            location.reload();
+        })
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+
+                    if (localStorage.getItem('users')) {
+                        users = JSON.parse(localStorage.getItem('users'))
+                        for (u in users) {
+                            console.log(users[u]);
+                            console.log(e.target.result)
+                            if (sessionStorage.getItem('email') == users[u].email) {
+                                console.log('added')
+                                users[u].posts.push(e.target.result)
+                                localStorage.setItem('users', JSON.stringify(users));
+                            }
+                        }
+
+
+                    }
+                    //$('#blah').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgInp").change(function () {
+            readURL(this);
+            location.reload();
+        });
+
+        if (localStorage.getItem('users')) {
+            users = JSON.parse(localStorage.getItem('users'))
+            for (u in users) {
+                console.log(users[u]);
+                if (sessionStorage.getItem('email') == users[u].email) {
+                    skills = ""
+                    postss = ""
+                    statuss = ""
+                    for (skill in users[u].skills) {
+                        skills += '<li class="input-group-prepend" id="li2">' + users[u].skills[skill] + ' &nbsp; <button class="btn btn-danger btn-sm rounded-0" type="button" title="Delete" id="delete' + skill + '" data-name="' + skill + '"><i class="fa fa-trash"></i></button> </li> <br>'
+                    }
+                    for (posts in users[u].posts) {
+                        if (users[u].posts[posts].includes("/mp4")) {
+                            postss += '<div class="col-md-6">  <canvas width="100" height="100px"></canvas>  <div class="bio-desk"> <video id="blah" controls autoplay width="300" height="300" style=margin-top:20px; src="' + users[u].posts[posts] + '" alt="your video" ></video> </div> </div>'
+
+                        }
+                        else {
+                            postss += '<div class="col-md-6">  <canvas width="100" height="100px"></canvas>  <div class="bio-desk"> <img id="blah"  width="300" height="300" style=margin-top:20px; src="' + users[u].posts[posts] + '" alt="your image" /> </div> </div>'
+
+                        }
+                    }
+                    for (status in users[u].status) {
+                        statuss += '<p>' + users[u].status[status] + '</p>'
+                    }
+                    $('#posts').html(postss)
+
+                    $('#status').html(statuss)
+
+                    $('#skills').html(skills)
+
+                    for (skill in users[u].skills) {
+                        $('#delete' + skill).click(function (skill) {
+                            //console.log($(this).attr('data-name'))
+                            users = JSON.parse(localStorage.getItem('users'))
+                            for (u in users) {
+                                if (sessionStorage.getItem('email') == users[u].email) {
+                                    users[u].skills.splice(Number($(this).attr('data-name')), 1);
+                                    localStorage.setItem('users', JSON.stringify(users));
+                                    console.log(users[u].skills)
+                                    //alert($(this).attr('data-name'))
+                                }
+                            }
+                            location.reload();
+
+                        })
+                    }
+
+                }
+            }
+
+
+        }
+
+        $('#Addskill').click(function () {
+            if (localStorage.getItem('users')) {
+                users = JSON.parse(localStorage.getItem('users'))
+                for (u in users) {
+                    console.log(users[u]);
+                    if (sessionStorage.getItem('email') == users[u].email) {
+                        users[u].skills.push($('#skill-text').val())
+                        localStorage.setItem('users', JSON.stringify(users));
+                    }
+                }
+
+
+            }
+
+            users = JSON.parse(localStorage.getItem('users'))
+            for (u in users) {
+                console.log(users[u]);
+                if (sessionStorage.getItem('email') == users[u].email) {
+                    skills = ""
+                    for (skill in users[u].skills) {
+                        skills += '<li class="input-group-prepend" >' + users[u].skills[skill] + ' &nbsp; <button class="btn btn-danger btn-sm rounded-0" type="button" title="Delete" ><i class="fa fa-trash "></i></button> </li> <br>'
+                    }
+                    $('#skills').html(skills)
+                }
+            }
+            location.reload();
+        })
+        $('#profile-name').html(sessionStorage.getItem('nom') ? sessionStorage.getItem('nom') : '')
+        $('#profile-email').html(sessionStorage.getItem('email') ? sessionStorage.getItem('email') : '')
+
+        $('#name').hide()
+        $('#lastname').hide()
+        $('#country').hide()
+        $('#birthday').hide()
+        $('#occupation').hide()
+        $('#email').hide()
+        $('#mobile').hide()
+        $('#update').hide()
+        $('#name-text').html(sessionStorage.getItem('nom') ? sessionStorage.getItem('nom') : '')
+
+        $('#lastname-text').html(sessionStorage.getItem('lastname') ? sessionStorage.getItem('lastname') : '')
+        $('#country-text').html(sessionStorage.getItem('country') ? sessionStorage.getItem('country') : '')
+        $('#birthday-text').html(sessionStorage.getItem('birthday') ? sessionStorage.getItem('birthday') : '')
+        $('#occupation-text').html(sessionStorage.getItem('occupation') ? sessionStorage.getItem('occupation') : '')
+        $('#email-text').html(sessionStorage.getItem('email') ? sessionStorage.getItem('email') : '')
+        $('#mobile-text').html(sessionStorage.getItem('mobile') ? sessionStorage.getItem('mobile') : '')
+        $('#jobs').click(function () {
+            var exists = false;
+            posts = []
+            if (localStorage.getItem('posts') != null) {
+                x.style.display = "inline";
+                x1.style.display = "none";
+                posts = JSON.parse(localStorage.getItem('posts'))
+
+                var html = "<thead>" + "<tr>" + "<td>" + 'index' + "</td>"
+                    + "<td>" + 'JobTitle' + "</td>"
+                    + "<td>" + 'salary' + "</td>"
+                    + "<td>" + 'Date' + "</td>"
+                    + "<td>" + 'Description' + "</td>"
+                    + "<td>" + 'Settings' + "</td>" + "<tr>" + "</thead>";
+
+                for (var i = 0; i < posts.length; i++) {
+                    html +=
+                        "<tr >"
+                        +
+                        "<td>" + (i + 1) + "</td>" +
+                        "<td>" + posts[i].jobtitle + "</td>" +
+                        "<td>" + posts[i].salary + "</td>" +
+                        "<td>" + posts[i].datee + "</td>" +
+                        "<td >" + posts[i].desc + "</td>" +
+
+                        "<td><button class='but' ; id='myBtn" + i + "' data-arrayIndex='" + i + "'+ onclick='openPopup(" + i + ")'>Apply</button></td>" +
+
+
+                        '<td><div id="test" class="popup">' +
+                        'successfully applied ' +
+                        '<div class="cancel" onclick="closePopup()"></div></td>"+"</tr>"';
+
+
+
+                }
+
+            }
+
+
+            $("#tableHtml").html(html);
+
+
+
+        })
+        $('#profile').click(function () {
+            location.reload()
+
+
+        })
+        $('#edit').click(function () {
+            x.style.display = "none";
+            x1.style.display = "inline";
+
+            $('#name').val(sessionStorage.getItem('nom') ? sessionStorage.getItem('nom') : '')
+            $('#lastname').val(sessionStorage.getItem('lastname') ? sessionStorage.getItem('lastname') : '')
+            $('#country').val(sessionStorage.getItem('country') ? sessionStorage.getItem('country') : '')
+            $('#birthday').val(sessionStorage.getItem('birthday') ? sessionStorage.getItem('birthday') : '')
+            $('#occupation').val(sessionStorage.getItem('occupation') ? sessionStorage.getItem('occupation') : '')
+            $('#email').val(sessionStorage.getItem('email') ? sessionStorage.getItem('email') : '')
+            $('#mobile').val(sessionStorage.getItem('mobile') ? sessionStorage.getItem('mobile') : '')
+
+            $('#name').show()
+            $('#lastname').show()
+            $('#country').show()
+            $('#birthday').show()
+            $('#occupation').show()
+            $('#email').show()
+            $('#mobile').show()
+            $('#update').show()
+
+        })
+        $('#update').click(function () {
+
+            sessionStorage.setItem('nom', $('#name').val());
+            sessionStorage.setItem('lastname', $('#lastname').val());
+            sessionStorage.setItem('country', $('#country').val());
+            sessionStorage.setItem('birthday', $('#birthday').val());
+            sessionStorage.setItem('occupation', $('#occupation').val());
+            sessionStorage.setItem('email', $('#email').val());
+            sessionStorage.setItem('mobile', $('#mobile').val());
+            $('#profile-name').html(sessionStorage.getItem('nom') ? sessionStorage.getItem('nom') : '')
+            $('#profile-email').html(sessionStorage.getItem('email') ? sessionStorage.getItem('email') : '')
+            $('#name-text').html($('#name').val())
+            $('#lastname-text').html($('#lastname').val())
+            $('#country-text').html($('#country').val())
+            $('#birthday-text').html($('#birthday').val())
+            $('#occupation-text').html($('#occupation').val())
+            $('#email-text').html($('#email').val())
+            $('#mobile-text').html($('#mobile').val())
+
+            $('#name').hide()
+            $('#lastname').hide()
+            $('#country').hide()
+            $('#birthday').hide()
+            $('#occupation').hide()
+            $('#email').hide()
+            $('#mobile').hide()
+            $('#update').hide()
+
+        })
+        $('#delete').click(function () {
+            var entry = $(this).parent();
+            entry.remove();
+        })
+        let count = 0;
+        function openPopup(i) {
+            console.log(i)
+            document.getElementById('test').style.display = 'block';
+
+
+
+
+            count = count + 1;
+            existing = localStorage.getItem('posts');
+
+
+            // If no existing data, create an array
+            // Otherwise, convert the localStorage string to an array
+            existing = existing ? JSON.parse(existing) : {};
+
+
+            // Add new data to localStorage Array
+
+            existing[i].count_user = count;
+
+            // Save back to localStorage
+            localStorage.setItem("posts", JSON.stringify(existing));
+            button = "myBtn";
+            buttonindex = button.concat(i)
+
+
+            document.getElementById(buttonindex).disabled = true;
+        }
+
+        function closePopup() {
+            document.getElementById('test').style.display = 'none';
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

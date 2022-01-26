@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from creativelayers.net/themes/jobhunt-html/employer_manage_jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Jan 2022 19:59:01 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Job Hunt</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="CreativeLayers">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
+	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+	<link rel="stylesheet" type="text/css" href="css/chosen.css" />
+	<link rel="stylesheet" type="text/css" href="css/colors/colors.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+	
+</head>
+<body>
+
+<div class="page-loading">
+	<img src="images/loader.gif" alt="" />
+	<span>Skip Loader</span>
+</div>
+
+<div class="theme-layout" id="scrollup">
+	
+	
+	
+	
+
+
+	<section>
+
+	<h2> Job</h2>
+		<div class="block no-padding">
+			<div class="container">
+				 <div class="row no-gape">
+				 	<aside class="col-lg-3 column border-right">
+				 		<div class="widget">
+				 			<div class="tree_widget-sec">
+				 				<ul>
+				 					
+				 					<li><a href="employer_manage_jobs.html" title=""><i class="la la-briefcase"></i>Manage Jobs</a></li>
+
+				 					
+				 					<li><a href="employer_post_new.html" title=""><i class="la la-file-text"></i>Post a New Job</a></li>
+
+				 					<li><a href="login.html" title=""><i class="la la-unlink"></i>Logout</a></li>
+
+				 					
+				 				</ul>
+				 			</div>
+				 		</div>
+				 	</aside>
+				 	<div class="col-lg-9 column">
+				 		<div class="padding-left">
+					 		<div class="manage-jobs-sec">
+					 			<h3>Manage Jobs</h3>
+					 			<div class="extra-job-info">
+						 			<span ><i class="la la-clock-o"></i><strong id="countt"></strong> Job Posted</span>
+						 			<span><i class="la la-file-text"></i><strong id="countt2">20</strong> Application</span>
+						 			
+						 		</div>
+						 		
+<div class="col-lg-9 column">
+				 		<div class="padding-left">
+					 		<div class="manage-jobs-sec">
+					 				<table id="tableHtml">
+
+						 			
+						 			
+						 		</table>
+					 		</div></div></div>
+		
+		
+						 		
+					 		</div>
+					 	</div>
+					</div>
+				 </div>
+			</div>
+		</div>
+	</section>
+
+	
+
+</div>
+
+
+
+
+<script src="js/jquery.min.js" ></script>
+<script src="js/modernizr.js" ></script>
+<script src="js/script.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+<script src="js/wow.min.js" ></script>
+<script src="js/slick.min.js" ></script>
+<script src="js/parallax.js" ></script>
+<script src="js/select-chosen.js" ></script>
+<script src="js/jquery.scrollbar.min.js" ></script>
+<script>
+	
+	 var exists = false;
+        posts=[]
+          if (localStorage.getItem('posts')!= null) {
+                posts = JSON.parse(localStorage.getItem('posts'))
+             
+                 var html = "<thead>"+"<tr>"+"<td>"+'index'+"</td>"
+						    +"<td>"+'JobTitle'+"</td>"
+						    +"<td>"+'count'+"</td>"
+						    +"<td>"+'Date'+"</td>"
+						    +"<td>"+'Settings'+"</td>"+"<tr>"+"</thead>";
+                document.getElementById("countt").innerHTML=posts.length; 
+                var sum=0;
+    for (var i = 0; i < posts.length; i++)
+       {
+    		html +=	   
+		    "<tr>"
+				  +
+            "<td>"+ (i+1) + "</td>"+
+            "<td>"+"<a href='#'>"+ posts[i].jobtitle + "</td>"+
+            "<td>"+ "<a href='#'>"+posts[i].count_user + "</td>"+
+            "<td>"+ "<a href='#'>"+posts[i].datee + "</td>"+
+          "<td><button data-arrayIndex='"+ i +"' onclick='deleteData("+i+")'>Delete</button></td>"+"</tr>";
+          sum+=posts[i].count_user ;
+      }
+      document.getElementById("countt2").innerHTML=sum;
+}
+
+function deleteData(i){
+
+	var posts = JSON.parse(localStorage.getItem('posts'));
+    // here you need to make a loop to find the index of item to delete
+    var indexToRemove = i;
+
+    //remove item selected, second parameter is the number of items to delete 
+    posts.splice(indexToRemove, 1);
+
+   // Put the object into storage
+   localStorage.setItem('posts', JSON.stringify(posts));
+   location.reload(true);
+}
+console.log(posts.length);
+$("#tableHtml").html(html);
+
+</script>
+
+
+</body>
+
+<!-- Mirrored from creativelayers.net/themes/jobhunt-html/employer_manage_jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Jan 2022 19:59:01 GMT -->
+
+</html>
+
+
+
