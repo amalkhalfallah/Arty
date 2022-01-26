@@ -148,11 +148,13 @@
 						sessionStorage.setItem('email', users[u].email);
 						sessionStorage.setItem('password', users[u].email);
 						sessionStorage.setItem('nom', users[u].name);
-						if (users[u].Role == "Recruiter")
+						if (users[u].Role == "Recruiter") {
 							window.location.href = "employer_post_new.html";
+
+						}
+
 						else {
 
-							$(".flaseinfo").hide()
 							window.location.href = "profile.html";
 						}
 
