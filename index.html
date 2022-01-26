@@ -5,7 +5,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Job Hunt</title>
+	<title>Arty</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
@@ -73,7 +73,7 @@
 										<p id="email-err" style="color: red;"> Please provide a valid email xxxx@xxxx.xx
 										</p>
 										<div class="cfield">
-											<input type="password" id="password" placeholder="********" />
+											<input type="password" id="password" placeholder="Password" />
 											<i class="la la-key"></i>
 
 										</div>
@@ -150,11 +150,12 @@
 						sessionStorage.setItem('nom', users[u].name);
 						if (users[u].Role == "Recruiter")
 							window.location.href = "employer_post_new.html";
-						else
+						else {
 
 							$(".flaseinfo").hide()
+							window.location.href = "profile.html";
+						}
 
-						window.location.href = "profile.html";
 
 					} else {
 
