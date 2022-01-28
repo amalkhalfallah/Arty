@@ -179,9 +179,26 @@
 			} else {
 				$("#repeatpassword-err").hide()
 			}
+			if (localStorage.getItem('users')) {
+				users = JSON.parse(localStorage.getItem('users'))
+				for (u in users) {
+					console.log(users[u]);
+					if ($("#email").val() == users[u].email) {
+						exists = true;
+						is_ok = false;
+					}
+				}
+				if (!exists) {
+					users.push(obj)
+					is_ok = true
+				}
+
+			}
 			if (exists) {
 				$(".exists").show()
-				is_ok = false;
+			}
+			else {
+				users.push(obj)
 			}
 			if (is_ok) {
 
@@ -189,7 +206,6 @@
 				$("#password-err").hide()
 				$("#nom-err").hide()
 				$("#repeatpassword-err").hide()
-				$(".exists").hide()
 
 				users = []
 				obj = {}
@@ -203,21 +219,7 @@
 				obj.Role = ($("#Role").val())
 				window.location.href = "index.html";
 
-				if (localStorage.getItem('users')) {
-					users = JSON.parse(localStorage.getItem('users'))
-					for (u in users) {
-						console.log(users[u]);
-						if ($("#email").val() == users[u].email) {
-							exists = true;
-						}
-					}
-					if (!exists) {
-						users.push(obj)
-					}
 
-				} else {
-					users.push(obj)
-				}
 
 				localStorage.setItem('users', JSON.stringify(users));
 
