@@ -179,12 +179,17 @@
 			} else {
 				$("#repeatpassword-err").hide()
 			}
+			if (exists) {
+				$(".exists").show()
+				is_ok = false;
+			}
 			if (is_ok) {
 
 				$("#email-err").hide()
 				$("#password-err").hide()
 				$("#nom-err").hide()
 				$("#repeatpassword-err").hide()
+				$(".exists").hide()
 
 				users = []
 				obj = {}
@@ -215,9 +220,7 @@
 				}
 
 				localStorage.setItem('users', JSON.stringify(users));
-				if (exists) {
-					$(".exists").show()
-				}
+
 
 
 
